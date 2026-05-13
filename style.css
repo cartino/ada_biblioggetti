@@ -1,40 +1,68 @@
-/* =========================
-   BASE
-========================= */
+/* =====================================================
+   LEILA PREALPI - STYLE V4 CLEAN
+===================================================== */
+
+/* =====================================================
+   ROOT / COLORI
+===================================================== */
 
 :root {
   --giallo-ada: #f5ad18;
+  --giallo-chiaro: #ffd77a;
+
   --marrone-ada: #5b3109;
+  --marrone-light: #704011;
+
   --crema: #fff7e8;
   --crema-scuro: #f3e2c2;
+
   --testo: #2f2418;
+
   --bianco: #ffffff;
+
+  --ombra-soft: 0 12px 32px rgba(91, 49, 9, 0.12);
+  --ombra-medium: 0 18px 40px rgba(91, 49, 9, 0.18);
+
+  --radius-big: 28px;
+  --radius-medium: 22px;
 }
 
+/* =====================================================
+   RESET
+===================================================== */
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
   background-color: var(--crema);
   color: var(--testo);
+  line-height: 1.5;
 }
 
-/* =========================
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header {
   background-color: var(--bianco);
   border-bottom: 4px solid var(--giallo-ada);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 .header-container {
   max-width: 1100px;
   margin: 0 auto;
+
   padding: 18px 30px;
 
   display: flex;
@@ -44,95 +72,241 @@ header {
 
 .logo img {
   height: 72px;
-  display: block;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu {
   list-style: none;
 
   display: flex;
+  align-items: center;
   gap: 34px;
 }
 
-nav li {
-  color: var(--marrone-ada);
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
+.menu-item {
   position: relative;
 }
 
-nav li::after {
+.menu-item > a {
+  text-decoration: none;
+
+  color: var(--marrone-ada);
+  font-size: 18px;
+  font-weight: 700;
+
+  padding: 12px 0;
+  display: inline-block;
+
+  position: relative;
+}
+
+/* linea hover */
+
+.menu-item > a::after {
   content: "";
+
   position: absolute;
   left: 0;
-  bottom: -7px;
+  bottom: 2px;
 
   width: 0;
   height: 3px;
+
   background-color: var(--giallo-ada);
+
   border-radius: 999px;
+
   transition: width 0.25s ease;
 }
 
-nav li:hover::after {
+.menu-item:hover > a::after {
   width: 100%;
 }
 
-/* =========================
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.dropdown {
+  list-style: none;
+
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  min-width: 230px;
+
+  background-color: var(--bianco);
+
+  border-radius: 18px;
+
+  padding: 10px;
+
+  box-shadow: 0 18px 35px rgba(91, 49, 9, 0.18);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease,
+    visibility 0.22s ease;
+
+  z-index: 100;
+}
+
+.menu-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown li a {
+  display: block;
+
+  padding: 12px 14px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  color: var(--testo);
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.dropdown li a:hover {
+  background-color: var(--crema);
+  color: var(--marrone-ada);
+}
+
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
-  min-height: 390px;
-  margin: 36px auto;
   max-width: 1100px;
-  border-radius: 28px;
+  min-height: 390px;
+
+  margin: 36px auto;
+
+  border-radius: var(--radius-big);
   overflow: hidden;
 
   background:
-    linear-gradient(rgba(91, 49, 9, 0.45), rgba(91, 49, 9, 0.45)),
+    linear-gradient(rgba(91,49,9,0.46), rgba(91,49,9,0.46)),
     url("hero.jpg") center/cover no-repeat;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 18px 40px rgba(91, 49, 9, 0.18);
+  box-shadow: var(--ombra-medium);
+}
+
+.hero-text {
+  color: var(--bianco);
+  text-align: center;
+  padding: 30px;
+  max-width: 850px;
+}
+
+.hero h1 {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -1px;
+
+  margin-bottom: 16px;
+
+  text-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+.hero p {
+  font-size: 24px;
+  font-weight: 800;
+
+  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
+}
+
+.hero-text {
+  color: var(--bianco);
+  padding: 48px 70px;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-size: 64px;
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+
+  margin-bottom: 18px;
+
+  text-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+.hero p {
+  font-size: 24px;
+  font-weight: 800;
+  max-width: 620px;
+
+  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
 }
 
 .hero-text {
   text-align: center;
   color: var(--bianco);
+
   padding: 30px;
 }
 
 .hero h1 {
-  margin: 0 0 14px;
-  font-size: 56px;
-  line-height: 1;
+  font-family: 'Pacifico', cursive;
+
+  font-size: 72px;
+  line-height: 1.1;
+
+  margin-bottom: 18px;
+
+  font-weight: normal;
+
+  text-shadow: 0 4px 14px rgba(0,0,0,0.35);
 }
 
 .hero p {
-  margin: 0;
   font-size: 22px;
   font-weight: 600;
 }
 
-/* =========================
+/* =====================================================
    FEATURES
-========================= */
+===================================================== */
 
 .features {
   max-width: 1100px;
+
   margin: 0 auto 36px;
+
   padding: 50px 30px;
 
   background-color: var(--bianco);
-  border-radius: 28px;
-  box-shadow: 0 12px 32px rgba(91, 49, 9, 0.12);
+
+  border-radius: var(--radius-big);
+
+  box-shadow: var(--ombra-soft);
 
   display: flex;
   justify-content: space-between;
@@ -141,106 +315,218 @@ nav li:hover::after {
 
 .feature {
   flex: 1;
-  text-align: center;
-  padding: 22px 16px;
-  border-radius: 22px;
+
   background-color: var(--crema);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
 
-.feature:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(91, 49, 9, 0.16);
-}
+  border-radius: var(--radius-medium);
 
-.box {
-  width: 118px;
-  height: 118px;
-  margin: 0 auto 16px;
-
-  background-color: var(--giallo-ada);
-  border-radius: 24px;
-  box-shadow: inset 0 -8px 0 rgba(91, 49, 9, 0.12);
-}
-
-.feature p {
-  margin: 0;
-  color: var(--marrone-ada);
-  font-size: 21px;
-  font-weight: 800;
-}
-
-/* =========================
-   CATALOGO
-========================= */
-
-.catalogo {
-  max-width: 1100px;
-  margin: 0 auto 36px;
-  padding: 60px 30px;
-
-  background-color: var(--crema-scuro);
-  border-radius: 28px;
-  text-align: center;
-}
-
-.catalogo a {
-  text-decoration: none;
-}
-
-.catalog-box {
-  max-width: 480px;
-  min-height: 150px;
-  margin: 0 auto;
-
-  background-color: var(--marrone-ada);
-  color: var(--bianco);
-  border-radius: 28px;
+  padding: 18px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 26px;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 30px rgba(91,49,9,0.20);
+}
+
+.feature img {
+  width: 85%;
+  max-width: 200px;
+  height: auto;
+}
+
+/* =====================================================
+   CATALOGO / CTA
+===================================================== */
+
+.catalogo {
+  max-width: 1100px;
+
+  margin: 0 auto 36px;
+
+  padding: 60px 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--giallo-ada),
+      var(--giallo-chiaro)
+    );
+
+  border-radius: var(--radius-big);
+
+  box-shadow: var(--ombra-soft);
+}
+
+.catalog-card {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  padding: 34px 38px;
+
+  background-color: var(--bianco);
+
+  border-radius: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+
+  text-decoration: none;
+
+  color: var(--marrone-ada);
+
+  box-shadow: 0 16px 34px rgba(91,49,9,0.20);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.catalog-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 22px 44px rgba(91,49,9,0.28);
+}
+
+.catalog-text span {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  background-color: var(--marrone-ada);
+  color: var(--bianco);
+
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
   font-weight: 800;
 
-  box-shadow: 0 14px 30px rgba(91, 49, 9, 0.25);
-  transition: transform 0.25s ease, background-color 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.catalog-box:hover {
-  transform: scale(1.04);
-  background-color: #704011;
+.catalog-text h2 {
+  font-size: 32px;
+  line-height: 1.1;
+
+  margin-bottom: 10px;
 }
 
-/* =========================
-   EXTRA
-========================= */
+.catalog-text p {
+  font-size: 17px;
+  line-height: 1.45;
+
+  color: #5a4a3a;
+}
+
+.catalog-arrow {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+
+  background-color: var(--marrone-ada);
+  color: var(--bianco);
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+  font-weight: bold;
+}
+
+/* =====================================================
+   WISHLIST
+===================================================== */
 
 .extra {
   max-width: 1100px;
+
   margin: 0 auto 36px;
-  padding: 45px 30px;
+
+  padding: 50px 30px;
 
   background-color: var(--bianco);
-  border-radius: 28px;
+
+  border-radius: var(--radius-big);
+
   text-align: center;
-  box-shadow: 0 12px 32px rgba(91, 49, 9, 0.1);
+
+  box-shadow: var(--ombra-soft);
 }
 
-.extra p {
-  margin: 0;
-  font-size: 19px;
+.wishlist h2 {
+  margin-bottom: 12px;
+
+  font-size: 34px;
+
+  color: var(--marrone-ada);
 }
 
-/* =========================
+.wishlist p {
+  max-width: 620px;
+
+  margin: 0 auto 28px;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.wishlist-button {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  background-color: var(--giallo-ada);
+  color: var(--marrone-ada);
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 800;
+
+  box-shadow: 0 10px 20px rgba(91,49,9,0.20);
+
+  transition:
+    transform 0.22s ease,
+    background-color 0.22s ease;
+}
+
+.wishlist-button:hover {
+  transform: translateY(-3px);
+
+  background-color: #ffc94d;
+}
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
   background-color: var(--marrone-ada);
+
   color: var(--bianco);
+
   text-align: center;
+
   padding: 28px 20px;
 }
 
@@ -248,17 +534,18 @@ footer p {
   margin: 6px 0;
 }
 
-/* =========================
-   MOBILE BASE
-========================= */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 768px) {
+
   .header-container {
     flex-direction: column;
     gap: 18px;
   }
 
-  nav ul {
+  .menu {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
@@ -273,13 +560,30 @@ footer p {
     font-size: 42px;
   }
 
+  .hero p {
+    font-size: 18px;
+  }
+
   .features {
-    margin: 0 16px 24px;
     flex-direction: column;
+
+    margin: 0 16px 24px;
   }
 
   .catalogo,
   .extra {
     margin: 0 16px 24px;
   }
+
+  .catalog-card {
+    flex-direction: column;
+    text-align: center;
+
+    padding: 30px 24px;
+  }
+
+  .catalog-text h2 {
+    font-size: 26px;
+  }
+
 }
