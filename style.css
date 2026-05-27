@@ -314,21 +314,18 @@ nav ul {
   color: #5a4a3a;
 }
 
-.catalog-arrow {
-  width: 64px;
-  height: 64px;
-  min-width: 64px;
-
+.catalog-illustration {
+  flex: 0 0 260px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  background-color: var(--marrone-ada);
-  color: var(--bianco);
-  border-radius: 50%;
-
-  font-size: 34px;
-  font-weight: bold;
+.catalog-illustration img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
 }
 
 /* MOBILE */
@@ -341,6 +338,11 @@ nav ul {
 
   .catalog-text h2 {
     font-size: 26px;
+  }
+
+  .catalog-illustration {
+    flex: none;
+    max-width: 230px;
   }
 }
 
