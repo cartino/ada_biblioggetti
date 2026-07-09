@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Leila Prealpi - Biblioteca degli Oggetti</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +16,9 @@
 <header>
   <div class="header-container">
     <div class="logo">
-      <img src="logo.png" alt="Logo ADA">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo ADA">
+      </a>
     </div>
 
 <nav>
@@ -25,27 +27,23 @@
     <li class="menu-item">
       <a href="#">Chi siamo</a>
       <ul class="dropdown">
-        <li><a href="associazione.html">L’associazione</a></li>
-		<li><a href="biblioteca-oggetti.html">La biblioteca degli oggetti</a></li>
-		<li><a href="volontari.html">Volontari</a></li>
+        <li><a href="manifesto.html">Manifesto</a></li>
       </ul>
     </li>
 
     <li class="menu-item">
       <a href="#">Eventi</a>
       <ul class="dropdown">
-        <li><a href="#">Calendario</a></li>
-        <li><a href="#">Laboratori</a></li>
-        <li><a href="#">Iniziative</a></li>
+        <li><a href="calendario.html">Calendario</a></li>
+        <li><a href="storia.html">Storia</a></li>
       </ul>
     </li>
 
     <li class="menu-item">
       <a href="#">Contatti</a>
       <ul class="dropdown">
-        <li><a href="#">Dove siamo</a></li>
-        <li><a href="#">Scrivici</a></li>
-        <li><a href="#">Social</a></li>
+        <li><a href="dove-ci-trovi.html">Dove ci trovi</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
       </ul>
     </li>
 
@@ -63,26 +61,74 @@
 </section>
 
 <!-- 4 BLOCCHI -->
-<section class="features">
+<section class="features" aria-label="Azioni principali">
 
-  <div class="feature">
-    <img src="partecipaM.PNG" alt="Condividi">
-    <p>Condividi</p>
+  <div class="feature feature-placeholder" tabindex="0">
+    <div class="feature-inner">
+      <div class="feature-face feature-front">
+        <span>Immagine in arrivo</span>
+        <p>Condividi</p>
+      </div>
+
+      <div class="feature-face feature-back">
+        <h3>Condividi</h3>
+        <p>
+          Metti in comune oggetti, tempo o competenze: ciò che usi poco può
+          diventare utile a qualcun altro.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="feature">
-    <img src="2 associati_M.PNG" alt="Associati">
-    <p>Associati</p>
+  <div class="feature" tabindex="0">
+    <div class="feature-inner">
+      <div class="feature-face feature-front">
+        <img src="2 associati_M.PNG" alt="Illustrazione Associati">
+        <p>Associati</p>
+      </div>
+
+      <div class="feature-face feature-back">
+        <h3>Associati</h3>
+        <p>
+          Entra nella comunità che sostiene il progetto e aiutaci a far crescere
+          la Biblioteca degli Oggetti.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="feature">
-    <img src="bottone_catalogo.png" alt="Accedi">
-    <p>Accedi</p>
+  <div class="feature" tabindex="0">
+    <div class="feature-inner">
+      <div class="feature-face feature-front">
+        <img src="bottone_catalogo.png" alt="Illustrazione Accedi">
+        <p>Accedi</p>
+      </div>
+
+      <div class="feature-face feature-back">
+        <h3>Accedi</h3>
+        <p>
+          Consulta il catalogo, scopri gli oggetti disponibili e scegli quello
+          che ti serve.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="feature feature-placeholder">
-    <span>Immagine in arrivo</span>
-    <p>Partecipa</p>
+  <div class="feature" tabindex="0">
+    <div class="feature-inner">
+      <div class="feature-face feature-front">
+        <img src="partecipaM.PNG" alt="Illustrazione Partecipa">
+        <p>Partecipa</p>
+      </div>
+
+      <div class="feature-face feature-back">
+        <h3>Partecipa</h3>
+        <p>
+          Prendi parte alle attività, proponi idee e contribuisci a costruire
+          uno spazio condiviso nel quartiere.
+        </p>
+      </div>
+    </div>
   </div>
 
 </section>
