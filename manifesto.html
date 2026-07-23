@@ -8,6 +8,69 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Regolazione fine solo per la pagina Manifesto.
+       Le altezze sono minime, non fisse: così il testo non esce mai dai fogli. */
+    @media (min-width: 981px) {
+      .manifesto-wall {
+        max-width: 1180px;
+        margin: 58px auto 78px;
+      }
+
+      .manifesto-composition {
+        grid-template-columns: 1fr 0.95fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+
+      .manifesto-title {
+        min-height: 128px;
+      }
+
+      .manifesto-title span {
+        font-size: 50px;
+      }
+
+      .manifesto-sheet {
+        padding: 42px 36px 38px;
+        overflow: visible;
+      }
+
+      .sheet-left,
+      .sheet-right {
+        min-height: 720px;
+      }
+
+      .sheet-center {
+        min-height: 780px;
+      }
+
+      .manifesto-sheet h2 {
+        margin-bottom: 22px;
+        font-size: 26px;
+        line-height: 1.15;
+      }
+
+      .manifesto-sheet p {
+        margin-bottom: 14px;
+        font-size: 15.6px;
+        line-height: 1.43;
+      }
+
+      .sheet-left p {
+        font-size: 15px;
+        line-height: 1.38;
+        margin-bottom: 12px;
+      }
+
+      .sheet-center p {
+        font-size: 15.5px;
+        line-height: 1.43;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -149,8 +212,9 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© Leila Prealpi - Biblioteca degli Oggetti</p>
-  <p>P.IVA XXXXXXXX</p>
+  <p><strong>ADA ETS</strong></p>
+  <p>Via Chiari 5, Milano 20155 · CF 98007390150</p>
+  <p>PEC: <a href="mailto:ada.biblioggetti@pec.it">ada.biblioggetti@pec.it</a></p>
 </footer>
 
 </body>
