@@ -52,25 +52,38 @@
   </div>
 </header>
 
-<main class="calendar-page">
+<main class="calendar-board-page">
 
-  <section class="calendar-intro">
-    <span class="page-tag">Eventi</span>
-    <h1>Calendario</h1>
-    <p>
-      Consulta gli appuntamenti, le attività e gli eventi della Biblioteca degli Oggetti.
-    </p>
-  </section>
+  <section class="object-noticeboard" aria-label="Bacheca degli appuntamenti">
 
-  <section class="calendar-box">
-    <iframe
-      src="https://calendar.google.com/calendar/embed?src=bibliogiardino.villapizzone%40gmail.com&ctz=Europe%2FRome"
-      style="border: 0"
-      width="100%"
-      height="760"
-      frameborder="0"
-      scrolling="no">
-    </iframe>
+    <div class="noticeboard-heading">
+      <span class="noticeboard-pin noticeboard-pin-left" aria-hidden="true"></span>
+
+      <div>
+        <p class="noticeboard-heading-small">Bacheca della Biblioteca degli Oggetti</p>
+        <h1>Prossimi appuntamenti</h1>
+      </div>
+
+      <span class="noticeboard-pin noticeboard-pin-right" aria-hidden="true"></span>
+    </div>
+
+    <div class="calendar-paper-board">
+      <iframe
+        class="google-calendar-board"
+        src="https://calendar.google.com/calendar/embed?src=bibliogiardino.villapizzone%40gmail.com&ctz=Europe%2FRome"
+        title="Calendario degli appuntamenti della Biblioteca degli Oggetti"
+        loading="lazy"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+    </div>
+
+    <div class="noticeboard-caption">
+      <span aria-hidden="true">📌</span>
+      <p>Il calendario viene aggiornato automaticamente.</p>
+      <span aria-hidden="true">☕</span>
+    </div>
+
   </section>
 
 </main>
