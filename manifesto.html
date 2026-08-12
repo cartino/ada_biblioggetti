@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260812">
+  <link rel="stylesheet" href="style.css?v=20260812-mobile">
 </head>
 <body>
 <header>
@@ -40,11 +40,27 @@
         </li>
       </ul>
     </nav>
+
+    <button class="mobile-menu-button" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+    <nav class="mobile-menu-panel" id="mobile-menu" aria-label="Menu mobile">
+      <a href="index.html">Home</a>
+      <a aria-current="page" href="manifesto.html">Manifesto</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="storia.html">Storia</a>
+      <a href="dove-ci-trovi.html">Dove ci trovi</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
   </div>
 </header>
 
 
 <main class="manifesto-wall">
+  <h1 class="mobile-page-title">Manifesto</h1>
   <section class="manifesto-composition" aria-label="Manifesto della Biblioteca degli Oggetti">
     <article class="manifesto-sheet sheet-left">
       <div class="tape" aria-hidden="true"></div>
@@ -84,5 +100,39 @@
   <p>Via Chiari 5, Milano 20155 · CF 98007390150</p>
   <p>PEC: <a href="mailto:ada.biblioggetti@pec.it">ada.biblioggetti@pec.it</a></p>
 </footer>
+<script>
+(function () {
+  var button = document.querySelector('.mobile-menu-button');
+  var panel = document.querySelector('.mobile-menu-panel');
+
+  if (!button || !panel) {
+    return;
+  }
+
+  function closeMenu() {
+    document.body.classList.remove('menu-open');
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', 'Apri il menu');
+  }
+
+  button.addEventListener('click', function () {
+    var isOpen = document.body.classList.toggle('menu-open');
+    button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    button.setAttribute('aria-label', isOpen ? 'Chiudi il menu' : 'Apri il menu');
+  });
+
+  panel.addEventListener('click', function (event) {
+    if (event.target.tagName === 'A') {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeMenu();
+    }
+  });
+}());
+</script>
 </body>
 </html>
