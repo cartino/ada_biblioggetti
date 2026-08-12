@@ -2,211 +2,92 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Storia - Biblioggetti Cagnola</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .history-photo-placeholder.has-image {
-      padding: 0;
-      overflow: hidden;
-      border: 0;
-      background: none;
-    }
-
-    .history-photo-placeholder.has-image img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    /* Rimosso il puntino della timeline: con foto e testi reali tendeva a sfalsarsi. */
-    .history-event::before,
-    .history-event-text::before {
-      display: none !important;
-      content: none !important;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css?v=20260812">
 </head>
-
 <body>
-
-<!-- HEADER -->
 <header>
   <div class="header-container">
-    <div class="logo">
-      <a href="index.html">
-        <img src="logo.png" alt="Logo ADA">
-      </a>
-    </div>
+    <a class="logo" href="index.html" aria-label="Vai alla home">
+      <img src="logo.png" alt="Logo ADA">
+    </a>
 
-    <nav>
+    <nav aria-label="Menu principale">
       <ul class="menu">
-
         <li class="menu-item">
-          <a href="#">Chi siamo</a>
+          <a href="manifesto.html">Chi siamo</a>
           <ul class="dropdown">
             <li><a href="manifesto.html">Manifesto</a></li>
           </ul>
         </li>
-
         <li class="menu-item">
-          <a href="#">Eventi</a>
+          <a href="calendario.html">Eventi</a>
           <ul class="dropdown">
             <li><a href="calendario.html">Calendario</a></li>
-            <li><a href="storia.html">Storia</a></li>
+            <li><a aria-current="page" href="storia.html">Storia</a></li>
           </ul>
         </li>
-
         <li class="menu-item">
-          <a href="#">Contatti</a>
+          <a href="contatti.html">Contatti</a>
           <ul class="dropdown">
             <li><a href="dove-ci-trovi.html">Dove ci trovi</a></li>
             <li><a href="contatti.html">Contatti</a></li>
           </ul>
         </li>
-
       </ul>
     </nav>
   </div>
 </header>
 
-<main class="history-page">
 
+<main class="history-page">
   <section class="history-intro">
     <span class="page-tag">Eventi</span>
     <h1>Storia</h1>
-    <p>
-      Qui teniamo traccia delle cose che facciamo: incontri, prove, momenti
-      un po' improvvisati e passaggi che pian piano stanno facendo nascere la
-      Biblioteca degli Oggetti.
-    </p>
+    <p>Qui teniamo traccia degli incontri, delle prove e dei passaggi che stanno facendo nascere la Biblioteca degli Oggetti nel quartiere.</p>
   </section>
 
   <section class="history-note">
-    <div class="history-note-marker">!</div>
-    <p>
-      Questa pagina per ora è una base di lavoro. Appena abbiamo foto, date e
-      racconti più precisi li mettiamo qui, così resta memoria di quello che è
-      successo e di come il progetto si è mosso nel quartiere.
-    </p>
+    <div class="history-note-marker" aria-hidden="true">!</div>
+    <p>Aggiorniamo questa pagina con foto, date e racconti degli appuntamenti pubblici, così resta memoria del percorso fatto insieme.</p>
   </section>
 
   <section class="history-timeline" aria-label="Archivio eventi">
-
     <article class="history-event">
       <div class="history-event-photos">
-        <div class="history-photo-placeholder is-main has-image">
-          <img src="1.png" alt="Primo incontro pubblico della Biblioteca degli Oggetti alla Tartuca">
-        </div>
-
-        <div class="history-photo-placeholder has-image">
-          <img src="2.png" alt="Partecipanti durante l'incontro pubblico della Biblioteca degli Oggetti">
-        </div>
-
-        <div class="history-photo-placeholder has-image">
-          <img src="3.png" alt="Cartellone con post-it raccolti durante l'incontro">
-        </div>
+        <figure class="history-photo is-main">
+          <img src="storia-presentazione-1.jpg" alt="Primo incontro pubblico della Biblioteca degli Oggetti alla Tartuca">
+        </figure>
+        <figure class="history-photo">
+          <img src="storia-presentazione-2.jpg" alt="Partecipanti durante l'incontro pubblico della Biblioteca degli Oggetti">
+        </figure>
+        <figure class="history-photo">
+          <img src="storia-presentazione-3.jpg" alt="Cartellone con post-it raccolti durante l'incontro">
+        </figure>
       </div>
 
       <div class="history-event-text">
-        <div class="history-date">Tartuca · 26 Marzo 2026</div>
+        <div class="history-date">Tartuca · 26 marzo 2026</div>
         <h2>Prima presentazione del progetto</h2>
-        <p>
-          Il primo incontro pubblico della biblioteca degli oggetti è stato
-          anche il primo passo di un percorso collettivo. Alla Tartuca ci siamo
-          incontratə per immaginare insieme cosa avrebbe potuto diventare questo
-          progetto. Più che una presentazione, è stata una conversazione aperta
-          sul quartiere, sui bisogni e sul desiderio di costruire un luogo di
-          condivisione.
-        </p>
-        <div class="history-tags">
+        <p>Il primo incontro pubblico della biblioteca degli oggetti è stato anche il primo passo di un percorso collettivo. Alla Tartuca ci siamo incontratə per immaginare insieme cosa avrebbe potuto diventare questo progetto. Più che una presentazione, è stata una conversazione aperta sul quartiere, sui bisogni e sul desiderio di costruire un luogo di condivisione.</p>
+        <div class="history-tags" aria-label="Parole chiave evento">
           <span>Presentazione</span>
           <span>Tartuca</span>
           <span>Quartiere</span>
         </div>
       </div>
     </article>
-
-    <article class="history-event">
-      <div class="history-event-photos">
-        <div class="history-photo-placeholder is-main">Foto principale<br>in arrivo</div>
-        <div class="history-photo-placeholder">Foto</div>
-        <div class="history-photo-placeholder">Foto</div>
-      </div>
-
-      <div class="history-event-text">
-        <div class="history-date">Evento 02 · Data in aggiornamento</div>
-        <h2>Lorem ipsum dolor sit amet</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          facilisis, sem non porta tincidunt, justo mi volutpat lorem, vitae
-          faucibus nibh neque sed urna.
-        </p>
-        <p>
-          Curabitur a lectus sed nulla fermentum commodo. Donec non massa
-          mauris. Pellentesque habitant morbi tristique senectus et netus et
-          malesuada fames ac turpis egestas.
-        </p>
-        <p>
-          Sed vitae libero at ipsum tempor blandit. Praesent congue, nibh in
-          laoreet tincidunt, lorem arcu suscipit magna, non gravida risus ipsum
-          sed neque.
-        </p>
-        <div class="history-tags">
-          <span>Lorem</span>
-          <span>Ipsum</span>
-          <span>Dolor</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="history-event">
-      <div class="history-event-photos">
-        <div class="history-photo-placeholder is-main">Foto principale<br>in arrivo</div>
-        <div class="history-photo-placeholder">Foto</div>
-        <div class="history-photo-placeholder">Foto</div>
-      </div>
-
-      <div class="history-event-text">
-        <div class="history-date">Evento 03 · Data in aggiornamento</div>
-        <h2>Consectetur adipiscing elit</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-          tristique, mi nec aliquam viverra, arcu leo consequat libero, sed
-          pulvinar augue justo non neque.
-        </p>
-        <p>
-          Aliquam erat volutpat. Suspendisse potenti. Vivamus sed augue at
-          libero porttitor gravida. Nulla facilisi. Cras euismod, neque at
-          ultricies tincidunt, ipsum lacus dictum mi.
-        </p>
-        <p>
-          Aenean tempor, orci sed commodo finibus, massa risus tincidunt erat,
-          vel dignissim lorem magna sed nibh. Donec vitae sem sed justo
-          facilisis placerat.
-        </p>
-        <div class="history-tags">
-          <span>Lorem</span>
-          <span>Ipsum</span>
-          <span>Sit amet</span>
-        </div>
-      </div>
-    </article>
-
   </section>
-
 </main>
 
-<!-- FOOTER -->
 <footer>
   <p><strong>ADA ETS</strong></p>
   <p>Via Chiari 5, Milano 20155 · CF 98007390150</p>
   <p>PEC: <a href="mailto:ada.biblioggetti@pec.it">ada.biblioggetti@pec.it</a></p>
 </footer>
-
 </body>
 </html>

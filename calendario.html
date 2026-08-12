@@ -2,80 +2,62 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendario - Biblioggetti Cagnola</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260812">
 </head>
-
 <body>
-
 <header>
   <div class="header-container">
-    <div class="logo">
-      <a href="index.html">
-        <img src="logo.png" alt="Logo ADA">
-      </a>
-    </div>
+    <a class="logo" href="index.html" aria-label="Vai alla home">
+      <img src="logo.png" alt="Logo ADA">
+    </a>
 
-    <nav>
+    <nav aria-label="Menu principale">
       <ul class="menu">
-
         <li class="menu-item">
-          <a href="#">Chi siamo</a>
+          <a href="manifesto.html">Chi siamo</a>
           <ul class="dropdown">
             <li><a href="manifesto.html">Manifesto</a></li>
           </ul>
         </li>
-
         <li class="menu-item">
-          <a href="#">Eventi</a>
+          <a href="calendario.html">Eventi</a>
           <ul class="dropdown">
-            <li><a href="calendario.html">Calendario</a></li>
+            <li><a aria-current="page" href="calendario.html">Calendario</a></li>
             <li><a href="storia.html">Storia</a></li>
           </ul>
         </li>
-
         <li class="menu-item">
-          <a href="#">Contatti</a>
+          <a href="contatti.html">Contatti</a>
           <ul class="dropdown">
             <li><a href="dove-ci-trovi.html">Dove ci trovi</a></li>
             <li><a href="contatti.html">Contatti</a></li>
           </ul>
         </li>
-
       </ul>
     </nav>
   </div>
 </header>
 
+
 <main class="calendar-board-page">
-
   <section class="object-noticeboard" aria-label="Bacheca degli appuntamenti">
-
     <div class="noticeboard-heading">
       <span class="noticeboard-pin noticeboard-pin-left" aria-hidden="true"></span>
-
       <div>
         <p class="noticeboard-heading-small">Bacheca della Biblioteca degli Oggetti</p>
         <h1>Prossimi appuntamenti</h1>
       </div>
-
       <span class="noticeboard-pin noticeboard-pin-right" aria-hidden="true"></span>
     </div>
 
     <div class="calendar-paper-board">
-      <iframe
-        class="google-calendar-board"
-        src="https://calendar.google.com/calendar/embed?src=bibliogiardino.villapizzone%40gmail.com&ctz=Europe%2FRome"
-        title="Calendario degli appuntamenti della Biblioteca degli Oggetti"
-        loading="lazy"
-        frameborder="0"
-        scrolling="no">
-      </iframe>
+      <iframe class="google-calendar-board calendar-desktop" src="https://calendar.google.com/calendar/embed?src=ada.biblioggetti%40yahoo.com&ctz=Europe%2FRome" title="Calendario degli appuntamenti della Biblioteca degli Oggetti" loading="lazy"></iframe>
+      <iframe class="google-calendar-board calendar-mobile" src="https://calendar.google.com/calendar/embed?src=ada.biblioggetti%40yahoo.com&ctz=Europe%2FRome&mode=AGENDA" title="Elenco appuntamenti della Biblioteca degli Oggetti" loading="lazy"></iframe>
     </div>
 
     <div class="noticeboard-caption">
@@ -83,9 +65,7 @@
       <p>Il calendario viene aggiornato automaticamente.</p>
       <span aria-hidden="true">☕</span>
     </div>
-
   </section>
-
 </main>
 
 <footer>
@@ -93,6 +73,5 @@
   <p>Via Chiari 5, Milano 20155 · CF 98007390150</p>
   <p>PEC: <a href="mailto:ada.biblioggetti@pec.it">ada.biblioggetti@pec.it</a></p>
 </footer>
-
 </body>
 </html>

@@ -2,167 +2,134 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Leila Prealpi - Biblioteca degli Oggetti</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioggetti Cagnola - Biblioteca degli Oggetti</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260812">
 </head>
-
 <body>
-
-<!-- HEADER -->
 <header>
   <div class="header-container">
-    <div class="logo">
-      <a href="index.html">
-        <img src="logo.png" alt="Logo ADA">
-      </a>
-    </div>
+    <a class="logo" href="index.html" aria-label="Vai alla home">
+      <img src="logo.png" alt="Logo ADA">
+    </a>
 
-<nav>
-  <ul class="menu">
-
-    <li class="menu-item">
-      <a href="#">Chi siamo</a>
-      <ul class="dropdown">
-        <li><a href="manifesto.html">Manifesto</a></li>
+    <nav aria-label="Menu principale">
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="manifesto.html">Chi siamo</a>
+          <ul class="dropdown">
+            <li><a href="manifesto.html">Manifesto</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="calendario.html">Eventi</a>
+          <ul class="dropdown">
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="storia.html">Storia</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="contatti.html">Contatti</a>
+          <ul class="dropdown">
+            <li><a href="dove-ci-trovi.html">Dove ci trovi</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </li>
       </ul>
-    </li>
-
-    <li class="menu-item">
-      <a href="#">Eventi</a>
-      <ul class="dropdown">
-        <li><a href="calendario.html">Calendario</a></li>
-        <li><a href="storia.html">Storia</a></li>
-      </ul>
-    </li>
-
-    <li class="menu-item">
-      <a href="#">Contatti</a>
-      <ul class="dropdown">
-        <li><a href="dove-ci-trovi.html">Dove ci trovi</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
-      </ul>
-    </li>
-
-  </ul>
-</nav>
+    </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>Biblioggetti Cagnola</h1>
-    <p>Non la prima ma sicuramente la più feeca.</p>
-  </div>
-</section>
 
-<!-- 4 BLOCCHI -->
-<section class="features" aria-label="Azioni principali">
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Biblioggetti Cagnola</h1>
+      <p>Oggetti in comune, relazioni di quartiere.</p>
+    </div>
+  </section>
 
-  <div class="feature" tabindex="0">
-    <div class="feature-inner">
-      <div class="feature-face feature-front">
-        <img src="condividi.png" alt="Illustrazione Condividi">
-        <p>Condividi</p>
+  <section class="features" aria-label="Azioni principali">
+    <article class="feature" tabindex="0">
+      <div class="feature-inner">
+        <div class="feature-face feature-front">
+          <img src="card-condividi.png" alt="Oggetti messi in comune">
+          <p>Condividi</p>
+        </div>
+        <div class="feature-face feature-back">
+          <h2>Condividi</h2>
+          <p>Porta almeno un oggetto in ottimo stato.</p>
+        </div>
       </div>
+    </article>
 
-      <div class="feature-face feature-back">
-        <h3>Condividi</h3>
-        <p>
-          Porta almeno un oggetto in ottimo stato.
-        </p>
+    <article class="feature" tabindex="0">
+      <div class="feature-inner">
+        <div class="feature-face feature-front">
+          <img src="card-associati.png" alt="Tessera associativa">
+          <p>Associati</p>
+        </div>
+        <div class="feature-face feature-back">
+          <h2>Associati</h2>
+          <p>Attiva la tessera al prezzo di 15€.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="feature" tabindex="0">
+      <div class="feature-inner">
+        <div class="feature-face feature-front">
+          <img src="card-accedi.png" alt="Accesso al catalogo">
+          <p>Accedi</p>
+        </div>
+        <div class="feature-face feature-back">
+          <h2>Accedi</h2>
+          <p>Seleziona gli oggetti che desideri, prenotali e vieni a ritirarli.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="feature" tabindex="0">
+      <div class="feature-inner">
+        <div class="feature-face feature-front">
+          <img src="card-partecipa.png" alt="Partecipazione alla biblioteca">
+          <p>Partecipa</p>
+        </div>
+        <div class="feature-face feature-back">
+          <h2>Partecipa</h2>
+          <p>Ripara, sistema, tieni aperta la biblioteca e prenditene cura.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="catalogo" aria-labelledby="catalogo-title">
+    <div class="catalog-card">
+      <div class="catalog-text">
+        <span>Catalogo online</span>
+        <h2 id="catalogo-title">Scopri gli oggetti disponibili</h2>
+        <p>Il catalogo sarà il punto di accesso agli oggetti disponibili per il prestito.</p>
+      </div>
+      <div class="catalog-illustration">
+        <img src="catalogo-freccia.png" alt="">
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="feature" tabindex="0">
-    <div class="feature-inner">
-      <div class="feature-face feature-front">
-        <img src="2 associati_M.PNG" alt="Illustrazione Associati">
-        <p>Associati</p>
-      </div>
+  <section class="extra wishlist">
+    <h2>Che oggetto vorresti trovare?</h2>
+    <p>Aiutaci a far crescere la biblioteca: suggerisci gli oggetti che potrebbero essere utili alla comunità.</p>
+    <a class="wishlist-button" href="mailto:ada.biblioggetti@yahoo.com?subject=Suggerimento%20oggetto%20per%20Biblioggetti">Suggerisci un oggetto</a>
+  </section>
+</main>
 
-      <div class="feature-face feature-back">
-        <h3>Associati</h3>
-        <p>
-          Attiva la tessera al prezzo di 15€.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="feature" tabindex="0">
-    <div class="feature-inner">
-      <div class="feature-face feature-front">
-        <img src="bottone_catalogo.png" alt="Illustrazione Accedi">
-        <p>Accedi</p>
-      </div>
-
-      <div class="feature-face feature-back">
-        <h3>Accedi</h3>
-        <p>
-          Seleziona gli oggetti che desideri, prenotali e vieni a ritirarli.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="feature" tabindex="0">
-    <div class="feature-inner">
-      <div class="feature-face feature-front">
-        <img src="partecipaM.PNG" alt="Illustrazione Partecipa">
-        <p>Partecipa</p>
-      </div>
-
-      <div class="feature-face feature-back">
-        <h3>Partecipa</h3>
-        <p>
-          Ripara, sistema, tieni aperta la biblioteca e prenditene cura.
-        </p>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-<!-- BLOCCO CATALOGO -->
-<section class="catalogo">
-  <a href="#" class="catalog-card">
-    <div class="catalog-text">
-      <span>Catalogo online</span>
-      <h2>Scopri gli oggetti disponibili</h2>
-      <p>Consulta la biblioteca, trova ciò che ti serve e accedi al prestito.</p>
-    </div>
-
-<div class="catalog-illustration">
-    <img src="puntatore-freccia.PNG" alt="Vai al catalogo">
-</div>
-  </a>
-</section>
-
-<!-- BLOCCO EXTRA -->
-<section class="extra wishlist">
-  <h2>Che oggetto vorresti trovare?</h2>
-
-  <p>
-    Aiutaci a far crescere la biblioteca: suggerisci gli oggetti che potrebbero essere utili alla comunità.
-  </p>
-
-  <a class="wishlist-button" href="LINK_GOOGLE_FORM" target="_blank">
-    Suggerisci un oggetto
-  </a>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <p><strong>ADA ETS</strong></p>
   <p>Via Chiari 5, Milano 20155 · CF 98007390150</p>
   <p>PEC: <a href="mailto:ada.biblioggetti@pec.it">ada.biblioggetti@pec.it</a></p>
 </footer>
-
 </body>
 </html>
