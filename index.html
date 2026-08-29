@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260829-link-map">
+  <link rel="stylesheet" href="style.css?v=20260829-hero-catalog-menu-fix">
 </head>
 <body>
 <header>
@@ -122,16 +122,18 @@
   </section>
 
   <section class="catalogo" aria-labelledby="catalogo-title">
-    <a class="catalog-card" href="https://prealpi.leila.srl/" target="_blank" rel="noopener">
+    <div class="catalog-card">
       <div class="catalog-text">
         <span>Catalogo online</span>
-        <h2 id="catalogo-title">Scopri gli oggetti disponibili</h2>
+        <h2 id="catalogo-title">
+          <a class="catalog-title-link" href="https://prealpi.leila.srl/" target="_blank" rel="noopener">Scopri gli oggetti disponibili</a>
+        </h2>
         <p>Consulta il catalogo online, scegli gli oggetti disponibili e prenota quello che ti serve.</p>
       </div>
-      <div class="catalog-illustration">
+      <a class="catalog-illustration catalog-arrow-link" href="https://prealpi.leila.srl/" target="_blank" rel="noopener" aria-label="Apri il catalogo online">
         <img src="catalogo-freccia.png" alt="">
-      </div>
-    </a>
+      </a>
+    </div>
   </section>
 
   <section class="extra wishlist">
