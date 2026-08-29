@@ -67,13 +67,6 @@ header {
   width: auto;
 }
 
-
-.mobile-menu-button,
-.mobile-menu-panel,
-.mobile-page-title {
-  display: none !important;
-}
-
 nav ul {
   margin: 0;
   padding: 0;
@@ -628,13 +621,14 @@ nav ul {
   border: 2px dashed rgba(91, 49, 9, 0.22);
 }
 
-.where-map-card {
+.where-map-placeholder.where-map-card {
+  min-height: 360px;
   padding: 0;
   overflow: hidden;
   border: 0;
 }
 
-.where-map {
+.where-map-card .where-map {
   width: 100%;
   min-height: 360px;
   height: 100%;
@@ -1454,7 +1448,7 @@ footer a:hover {
   .mobile-menu-button {
     position: relative;
     z-index: 102;
-    display: inline-flex !important;
+    display: inline-flex;
     width: 50px;
     height: 50px;
     flex: 0 0 auto;
@@ -1495,7 +1489,7 @@ footer a:hover {
     left: 14px;
     right: 14px;
     z-index: 101;
-    display: grid !important;
+    display: grid;
     max-height: calc(100dvh - 104px);
     padding: 16px;
     gap: 10px;
@@ -1723,7 +1717,7 @@ footer a:hover {
   }
 
   .mobile-page-title {
-    display: block !important;
+    display: block;
     margin: 0 0 18px;
     color: var(--marrone-ada);
     font-size: 42px;
@@ -1815,12 +1809,13 @@ footer a:hover {
     min-height: 220px;
   }
 
-  .where-map-card {
+  .where-map-placeholder.where-map-card {
+    min-height: 280px;
     padding: 0;
   }
 
-  .where-map {
-    min-height: 260px;
+  .where-map-card .where-map {
+    min-height: 280px;
   }
 
   .where-map-placeholder h2,
