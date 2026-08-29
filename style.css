@@ -592,6 +592,20 @@ nav ul {
   border: 2px dashed rgba(91, 49, 9, 0.22);
 }
 
+.where-map-card {
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+.where-map {
+  width: 100%;
+  min-height: 360px;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
 .where-info-card,
 .contact-card {
   padding: 36px 34px;
@@ -1763,6 +1777,14 @@ footer a:hover {
 
   .where-map-placeholder {
     min-height: 220px;
+  }
+
+  .where-map-card {
+    padding: 0;
+  }
+
+  .where-map {
+    min-height: 260px;
   }
 
   .where-map-placeholder h2,
